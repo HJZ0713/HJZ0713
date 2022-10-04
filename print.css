@@ -1,0 +1,9 @@
+@media print {
+    .topcon .header .navbar .footer .posotion .wsfbxx .scan_code_box {
+        display:none;
+    }
+    .scenr {border:0:}
+    a[href]:after {
+        content:none !inportant
+    }
+}
