@@ -5,7 +5,7 @@ $userPwd1 = $_POST['userPwd'];
 $reuserPwd1 = $_POST['reuserPwd'];
 $code1 = $_POST['code'];
 //！！接下来四个变量填写自己的数据库信息：
-    $servername = "localhost";
+    $servername = "hjz0713.github.io";
 	$username = "root";
 	$password = "root";
 	$dbname = "test";
