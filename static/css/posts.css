@@ -1,0 +1,14 @@
+@import url("common.css");
+
+.post-info span {
+    margin-right: 10px;
+}
+
+.post-title {
+    font-size: 30px;
+}
+
+img {
+    width: 180px;
+    height: 100px;
+}

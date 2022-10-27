@@ -1,0 +1,8 @@
+@import url("common.css");
+
+.post-info {
+    color: gray;
+}
+.post-info span {
+    margin-right: 15px;
+}
