@@ -1,0 +1,6 @@
+@import url("common.css");
+
+.row img {
+    width: 80px;
+    height: 80px;
+}
