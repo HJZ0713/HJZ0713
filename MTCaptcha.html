@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>	
+<head>
+
+<!-- MTCap Code Start-->    
+  <!-- Configuration to construct the captcha widget.
+      Sitekey is a Mandatory Parameter-->
+   
+  <script>
+    var mtcaptchaConfig = {
+      "sitekey": "MTPublic-MwYi3W23H",
+      "widgetSize": "mini",
+      "lang": "zh",
+      "autoFormValidate": true,
+      "jsloaded-callback": "mt_jsloadedcb",
+      "rendered-callback": "mt_renderedcb",
+      "verified-callback": "mt_verifiedcb",
+      "verifyexpired-callback": "mt_verifyexpiredcb",
+      "error-callback": "mt_errorcb"
+     };
+   (function(){var mt_service = document.createElement('script');mt_service.async = true;mt_service.src = 'https://service.mtcaptcha.com/mtcv1/client/mtcaptcha.min.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mt_service);
+   var mt_service2 = document.createElement('script');mt_service2.async = true;mt_service2.src = 'https://service2.mtcaptcha.com/mtcv1/client/mtcaptcha2.min.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mt_service2);}) ();
+
+   var mt_jsloadedcb = function() {
+      console.log('MTCap JS LOADED!');
+   }
+   var mt_renderedcb = function(eventObj) {
+      console.log('CHALLENGE RENDERED!');
+      var statusObj = JSON.stringify(eventObj)
+      console.log('Rendered eventObj = '+ statusObj.replace('{}', eventObj.element));
+   }
+   var mt_verifiedcb = function(eventObj) {
+      console.log('CHALLENGE VERIFIED!');
+      var statusObj = JSON.stringify(eventObj, undefined, 6)
+      console.log('Verified eventObj = '+ statusObj.replace('{}', eventObj.element));
+   }
+   var mt_verifyexpiredcb = function(eventObj) {
+      console.log('CHALLENGE VERFICATION EXPIRED!');
+      var statusObj = JSON.stringify(eventObj, undefined, 6)
+      console.log('Verify Expired eventObj = '+ statusObj.replace('{}', eventObj.element));
+   }
+   var mt_errorcb = function(eventObj) {
+      console.log('ERROR OCCURRED!');
+      var statusObj = JSON.stringify(eventObj, undefined, 6)
+      console.log('eventObj = '+ statusObj.replace('{}', eventObj.element));
+   }
+ </script>
+</head>
+<body>
+  <form id="demo-form">
+    <fieldset id="demo-fieldset">
+      <div class="demo-label">Email</div>
+      <input class="demo-form-input" name="email" type="text" value="user@email.com" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+      <div class="demo-label">Password</div>
+      <input class="demo-form-input" name="password" type="password" value="userpassword" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+      <div style="margin-top:20px"></div>
+       <!-- Div to place the Captcha -->
+      <div class="mtcaptcha"></div>
+      <input class="demo-form-btn" type="submit" value="Sign in">
+    </fieldset>
+  </form>
+</body>
+</html>
